@@ -8,6 +8,7 @@ app = Flask(__name__)
 REQUEST_COUNT = Counter('http_requests_total', 'Total HTTP requests')
 REQUEST_TIME = Counter('http_request_duration_seconds', 'Request duration in seconds')
 
+# Работа приложения
 @app.route('/')
 def home():
     start = time.time()
