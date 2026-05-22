@@ -16,6 +16,7 @@ def home():
     REQUEST_TIME.inc(time.time() - start)
     return result
 
+# Метрики
 @app.route('/metrics')
 def metrics():
     return Response(generate_latest(REGISTRY), mimetype='text/plain')
